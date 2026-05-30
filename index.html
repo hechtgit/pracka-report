@@ -3,373 +3,207 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>8 kg veža: Bosch vs LG vs AEG</title>
+  <title>Práčka + sušička do veže: 8 kg, 9 kg a mix</title>
   <style>
-    :root {
-      --text:#1b1f24; --muted:#637085; --line:#d8dee8; --soft:#f5f7fb;
-      --bosch:#0f766e; --lg:#b4235a; --aeg:#5b6472;
-      --good:#19a463; --mid:#d89b13; --bad:#d94841;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:white}
-    header{padding:28px 40px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,var(--soft))}
-    main{padding:22px 40px 42px;min-width:1280px}
-    h1{margin:0 0 8px;font-size:28px}
-    h2{margin:28px 0 12px;font-size:20px}
-    h3{margin:0 0 8px;font-size:15px}
-    p{margin:6px 0}.note{color:var(--muted);max-width:1180px}
-    a{color:#0b5cad;text-decoration:none}a:hover{text-decoration:underline}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px}
-    .winner{border:2px solid #8ed2a9;background:#eaf8ef}
-    .warn{border:1px solid #e6c86f;background:#fff7df}
-    .score{font-size:28px;font-weight:800;margin:4px 0}.lg{color:var(--lg)}.bosch{color:var(--bosch)}.aeg{color:var(--aeg)}
-    .tag{display:inline-block;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:750;background:#edf0f5}
-    .tag.best{background:#d8f0e1;color:#0b7d45}.tag.ok{background:#ffeeb8;color:#8a5c00}.tag.risk{background:#ffd8d5;color:#a33831}
-    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
-    table{width:100%;border-collapse:collapse;min-width:1180px}
-    th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
-    th{position:sticky;top:0;background:#eef3f8;font-size:12px;text-transform:uppercase;letter-spacing:.02em;z-index:1}
-    .best-row{background:#eaf8ef}.ok-row{background:#fff7df}.risk-row{background:#fff0ee}
-    .bar{display:grid;grid-template-columns:42px 1fr;gap:8px;align-items:center;min-width:145px}
-    .track{height:10px;background:#edf0f5;border-radius:999px;overflow:hidden;border:1px solid #dfe4ec}
-    .fill{height:100%;border-radius:inherit}.good{background:var(--good)}.mid{background:var(--mid)}.bad{background:var(--bad)}
-    .score-cell{min-width:235px}
-    .worker-votes{margin-top:5px;display:grid;gap:3px;font-size:12px}
-    .worker-votes .positive{color:#0b7d45;font-weight:650}
-    .worker-votes .critical{color:#b42318;font-weight:650}
-    .worker-votes .none{color:var(--muted)}
-    .model-list{margin:6px 0 0;padding-left:18px}.model-list li{margin:5px 0}
-    .small{font-size:12px;color:var(--muted)}
-    .split-note{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .decision{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
-    .decision strong{display:block;margin-bottom:4px}
+    :root{--text:#17202a;--muted:#64748b;--line:#d8dee8;--soft:#f6f8fb;--good:#15945b;--mid:#d59b16;--bad:#d6453d;--bosch:#0f766e;--lg:#b4235a;--aeg:#59616d;--blue:#2463eb}
+    *{box-sizing:border-box}body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff}
+    header{padding:28px 40px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#f4f7fb)}main{min-width:1280px;padding:22px 40px 44px}
+    h1{margin:0 0 8px;font-size:30px}h2{margin:28px 0 12px;font-size:20px}h3{margin:0 0 8px;font-size:15px}p{margin:6px 0}.note,.small{color:var(--muted)}.small{font-size:12px}.tiny{font-size:11px;color:var(--muted)}
+    a{color:#0b5cad;text-decoration:none}a:hover{text-decoration:underline}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.nav a,.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:#fff;font-weight:650}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px}.winner{border:2px solid #84d1a1;background:#ebf8ef}.warn{border-color:#e9ca71;background:#fff8df}.risk{border-color:#eda39e;background:#fff2f1}
+    .score{font-size:27px;font-weight:850;line-height:1.1;margin:3px 0 6px}.bosch{color:var(--bosch)}.lg{color:var(--lg)}.aeg{color:var(--aeg)}
+    .price{font-size:21px;font-weight:850}.tag{display:inline-block;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:750;background:#edf1f5}.best{background:#d9f2e2;color:#0b7d45}.ok{background:#ffeeb8;color:#835900}.badtag{background:#ffd8d5;color:#a33831}.info{background:#dfeaff;color:#164fb4}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.product .imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.figure{border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}.figure img{width:100%;height:185px;object-fit:contain}.figcap{font-weight:750;text-align:center;font-size:12px;margin-top:4px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#fff}table{width:100%;border-collapse:collapse;min-width:1180px}th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{position:sticky;top:0;background:#eef3f8;font-size:12px;text-transform:uppercase;letter-spacing:.02em;z-index:1}.best-row{background:#eaf8ef}.ok-row{background:#fff8df}.risk-row{background:#fff0ee}
+    ul{margin:6px 0 0;padding-left:18px}li{margin:4px 0}.bar{display:grid;grid-template-columns:42px 1fr;gap:8px;align-items:center;min-width:152px}.track{height:10px;background:#edf0f5;border-radius:999px;overflow:hidden;border:1px solid #dfe4ec}.fill{height:100%;border-radius:inherit}.good{background:var(--good)}.mid{background:var(--mid)}.bad{background:var(--bad)}.score-cell{min-width:235px}.worker-votes{margin-top:5px;display:grid;gap:3px;font-size:12px}.positive{color:#0b7d45;font-weight:700}.critical{color:#b42318;font-weight:700}.none{color:var(--muted)}.yes{color:#0b7d45;font-weight:800}.no{color:#b42318;font-weight:800}.maybe{color:#8a5c00;font-weight:800}
   </style>
 </head>
 <body>
 <header>
-  <h1>8 kg vežové riešenie: Bosch vs LG vs AEG</h1>
-  <p class="note">Nové zadanie: 8 kg stačí, porovnávame tri zladené veže jednej značky. V cenách sú iba porovnávané modely, nie lacnejšie nesúvisiace alternatívy.</p>
+  <h1>Práčka + sušička do veže: opravené porovnanie 8 kg, 9 kg a mix</h1>
+  <p class="note">Aktualizované po kontrole Sedmičky. Cieľ: jedna značka, zladený dizajn, štandardná šírka do 60 cm zárubne, stabilná veža, tichý chod, dobrá údržba sušičky a nákup na 5-10 rokov.</p>
+  <div class="nav">
+    <a href="#top-verdict">Verdikt</a><a href="#products">Modely a obrázky</a><a href="#prices">Ceny</a><a href="#features">Funkcie</a><a href="#scores">Vlastnosti + workeri</a><a href="#mix">Mix kapacít</a><a href="#workers">Sedmička</a><a href="pracka-susicka-9kg-bosch-lg-aeg.html">9 kg detail</a>
+  </div>
 </header>
 <main>
-  <section class="grid">
-    <div class="card warn">
-      <h3>Preklik na 9 kg porovnanie</h3>
-      <div class="score">9 kg verzia</div>
-      <p>Ak chcete porovnať, čo získate za vyššiu kapacitu, otvor samostatný report Bosch vs LG vs AEG pre 9 kg veže.</p>
-      <p><a href="pracka-susicka-9kg-bosch-lg-aeg.html"><strong>Otvoriť 9 kg porovnanie</strong></a></p>
-    </div>
+  <section id="top-verdict" class="grid">
     <div class="card winner">
-      <h3>Najlepší pomer cena / výbava</h3>
-      <div class="score lg">LG: 1 022,55 €</div>
-      <p>F4X1008NWH + RC81V9AV4N + DSTWH. Najnižšia veža z porovnávaných modelov a zároveň najlepšia sušička na údržbu.</p>
-      <p class="decision"><strong>Vyber LG, ak...</strong> chcete najlepšiu cenu, Wi-Fi/ThinQ, parné funkcie a automatické čistenie kondenzátora. Toto je praktický favorit 8 kg výberu.</p>
-      <p><span class="tag best">Verdikt: favorit</span></p>
+      <h3>Najrozumnejší nákup</h3>
+      <div class="score bosch">Bosch 9 kg Serie 6</div>
+      <p><strong>WGG244Z2CS + WQG245D4BY</strong> alebo pri dobrom sete <strong>WQG245DMCS</strong> + originálny medzikus.</p>
+      <p>Najlepší kompromis pre stabilitu veže, servis, SelfCleaning kondenzátor a cenu. Toto opravuje rozpor: Bosch je hlavný víťaz, nie LG.</p>
+      <p><span class="tag best">hlavné odporúčanie</span> <span class="tag info">cca 1 335-1 430 €</span></p>
+      <p><strong>Vyber Bosch Serie 6, ak...</strong> chcete pokojné riešenie na roky, nízku údržbu a dobrý pomer cena/kvalita viac než smart funkcie.</p>
     </div>
     <div class="card">
-      <h3>Najkonzervatívnejšia voľba</h3>
-      <div class="score bosch">Bosch: 1 105,90 €</div>
-      <p>WAN28270CS + WTH8520BBY + WTZ11400. Silný servis a jednoduché ovládanie, slabina je sušička bez samočistenia kondenzátora.</p>
-      <p class="decision"><strong>Vyber Bosch, ak...</strong> preferujete jednoduchší a servisne konzervatívnejší set, nevadí vám ručnejšia údržba sušičky a smart funkcie nie sú priorita.</p>
-      <p><span class="tag ok">Bezpečná, ale viac údržby</span></p>
+      <h3>Najlepší bez kompromisu</h3>
+      <div class="score bosch">Bosch 9 kg Serie 8</div>
+      <p><strong>WGB244A0CS + WQB245B0CS</strong>. Tichšia/prémiovejšia voľba s i-DOS a lepším SelfCleaning režimom sušičky.</p>
+      <p>Nie je to najlacnejšia zostava, ale dáva zmysel, ak kúpeľňa susedí s obývačkou a nechcete riešiť kompromisy.</p>
+      <p><span class="tag ok">prémiový favorit</span> <span class="tag info">cca 1 820 €+</span></p>
+      <p><strong>Vyber Serie 8, ak...</strong> chcete tichosť, komfort a automatické dávkovanie viac než najnižšiu cenu.</p>
     </div>
-    <div class="card">
-      <h3>Najšetrnejšie k textilu</h3>
-      <div class="score aeg">AEG: 1 277,90 €</div>
-      <p>LFR71844SBC + TR818A2C + SKP11GW3. Výborná starostlivosť o textil, ale vyššia cena a hlučnejšia sušička.</p>
-      <p class="decision"><strong>Vyber AEG, ak...</strong> chcete najšetrnejšiu starostlivosť o oblečenie a akceptujete vyššiu cenu za ProSteam, AbsoluteCare a lepšiu textilnú výbavu.</p>
-      <p><span class="tag ok">Prémiovejšie, drahšie</span></p>
+    <div class="card warn">
+      <h3>8 kg iba s kompromisom</h3>
+      <div class="score aeg">AEG 8 kg</div>
+      <p><strong>LFR71844SBC + TR8182C</strong> je najčistejšia 8 kg voľba, ak trváte na 8 kg. Slabina: nemá automatické čistenie kondenzátora ako Bosch/LG.</p>
+      <p><span class="tag ok">dobré, ale nie 10/10</span> <span class="tag info">cca 1 050-1 150 €</span></p>
+      <p><strong>Vyber 8 kg AEG, ak...</strong> chcete zostať pri dnešnej kapacite a nevadí vám manuálna údržba kondenzátora.</p>
     </div>
   </section>
 
-  <h2>Porovnávané modely a odkazy</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Značka</th><th>Práčka</th><th>Sušička</th><th>Medzikus</th><th>YouTube SK/CZ recenzie</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><strong>Bosch</strong></td>
-          <td><a href="https://pracky.heureka.sk/bosch-wan28270cs/">WAN28270CS</a><br><span class="small">8 kg, A, 1400 ot., 72 dB, Iron Assist, SpeedPerfect</span></td>
-          <td><a href="https://www.planeo.sk/bosch-wth8520bby">WTH8520BBY</a><br><span class="small">8 kg, tepelné čerpadlo, 63 dB, AutoDry, EasyClean</span></td>
-          <td><a href="https://medzikusy-pracka-susicka.heureka.sk/bosch-wtz11400/">WTZ11400</a><br><span class="small">s výsuvom; kompatibilitu overiť podľa E-number</span></td>
-          <td><a href="https://www.youtube.com/results?search_query=Bosch+WAN28270CS+recenze">práčka</a> · <a href="https://www.youtube.com/results?search_query=Bosch+WTH8520BBY+recenze">sušička</a></td>
-        </tr>
-        <tr>
-          <td><strong>LG</strong></td>
-          <td><a href="https://www.planeo.sk/lg-f4x1008nwh">F4X1008NWH</a><br><span class="small">8 kg, A, 1400 ot., Steam, ThinQ Wi‑Fi, Direct Drive</span></td>
-          <td><a href="https://www.planeo.sk/lg-rc81v9av4n">RC81V9AV4N</a><br><span class="small">8 kg, tepelné čerpadlo, 62 dB, Auto Cleaning, EcoHybrid, ThinQ</span></td>
-          <td><a href="https://www.planeo.sk/lg-dstwh">DSTWH</a><br><span class="small">originálny výsuvný medzikus, nosnosť police 16 kg</span></td>
-          <td><a href="https://www.youtube.com/results?search_query=LG+F4X1008NWH+recenze">práčka</a> · <a href="https://www.youtube.com/results?search_query=LG+RC81V9AV4N+recenze">sušička</a></td>
-        </tr>
-        <tr>
-          <td><strong>AEG</strong></td>
-          <td><a href="https://pracky.heureka.sk/aeg-lfr71844sbc_2/">LFR71844SBC</a><br><span class="small">8 kg, A, 1400 ot., ProSteam, ÖKOInvertor, slovenský panel</span></td>
-          <td><a href="https://susicky.heureka.sk/aeg-tr818a2c/">TR818A2C</a><br><span class="small">8 kg, tepelné čerpadlo, AbsoluteCare/SensiDry, 67 dB</span></td>
-          <td><a href="https://www.akton.sk/susicky-bielizne/aeg-skp11gw3/">SKP11GW3</a><br><span class="small">originálny medzikus s výsuvnou policou</span></td>
-          <td><a href="https://www.youtube.com/results?search_query=AEG+LFR71844SBC+recenze">práčka</a> · <a href="https://www.youtube.com/results?search_query=AEG+TR818A2C+recenze">sušička</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Poznámka k YouTube: dávam bezpečné vyhľadávacie odkazy na konkrétne modely. Pri týchto modeloch som nenašiel spoľahlivú SK/CZ videorecenziu, ktorú by som vedel označiť ako priamu recenziu bez rizika zámeny s podobným modelom.</p>
+  <h2>Čo bolo opravené</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Problém v starej verzii</th><th>Oprava</th><th>Dôvod</th></tr></thead>
+    <tbody>
+      <tr class="best-row"><td>Raz vyhral Bosch, potom LG.</td><td><strong>Bosch 9 kg</strong> je hlavný verdikt; <strong>LG</strong> je len cena/výbava, ak je skladom.</td><td>Sedmička zhodne penalizovala LG za slabé signály dostupnosti pri oficiálnych stránkach.</td></tr>
+      <tr><td>V reporte boli staré Bosch modely.</td><td>Vyradené: <strong>WTH8520BBY</strong>, <strong>WQG245D0CS</strong>, opatrne aj <strong>WQG233D2CS</strong>.</td><td>Workeri ich označili ako výbehové/nedostupné alebo nevhodné ako základ na 5-10 rokov.</td></tr>
+      <tr><td>8 kg report robil z LG favorita.</td><td>8 kg favorit je <strong>AEG LFR71844SBC + TR8182C</strong>, ale s jasným kompromisom.</td><td>LG 8 kg je technicky dobré, ale dostupnosť je slabý bod. AEG nemá SelfCleaning, preto 8 kg nie je ideálne.</td></tr>
+      <tr><td>Mix kapacít nebol jasne uzavretý.</td><td><strong>8 kg práčka + 9 kg sušička</strong> môže dávať zmysel; <strong>9 kg práčka + 8 kg sušička</strong> skoro nikdy.</td><td>Sušička potrebuje viac objemu ako práčka. Pri favoritovi však najviac dáva zmysel 9/9 Bosch.</td></tr>
+    </tbody>
+  </table></div>
 
-  <h2>Ceny iba pre porovnávané modely</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Poradie ceny</th><th>Zostava</th><th>Práčka</th><th>Sušička</th><th>Medzikus</th><th>Spolu</th><th>Poznámka</th></tr></thead>
-      <tbody>
-        <tr class="best-row"><td>1</td><td><strong>LG</strong></td><td>379,00 €</td><td>568,65 € s kupónom</td><td>74,90 €</td><td><strong>1 022,55 €</strong></td><td>Najnižšia cena a najlepšia údržba sušičky.</td></tr>
-        <tr class="ok-row"><td>2</td><td><strong>Bosch</strong></td><td>459,90 €</td><td>579,00 €</td><td>67,00 €</td><td><strong>1 105,90 €</strong></td><td>Ak stačí basic medzikus WTZ20410, môže byť ešte lacnejší.</td></tr>
-        <tr class="risk-row"><td>3</td><td><strong>AEG</strong></td><td>529,00 €</td><td>669,00 €</td><td>79,90 €</td><td><strong>1 277,90 €</strong></td><td>Najdrahšia, oplatí sa len ak priorita je textil.</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <h2 id="products">Modely, obrázky a rozhodovanie</h2>
+  <section class="products">
+    <div class="card product winner">
+      <h3>Bosch Serie 6: hlavný value favorit</h3>
+      <div class="imgs">
+        <div class="figure"><img alt="Bosch WGG244Z2CS práčka" src="https://media3.bosch-home.com/Product_Shots/23143712_WGG244Z2CS_PGA1_def.png"><div class="figcap">Práčka WGG244Z2CS</div></div>
+        <div class="figure"><img alt="Bosch WQG245D4BY sušička" src="https://media3.bosch-home.com/Product_Shots/23143712_WQG245D4BY_PGA1_def.png" onerror="this.src='https://media3.bosch-home.com/Product_Shots/25796886_WQG245DMCS_PGA1_def.png'"><div class="figcap">Sušička WQG245D4BY / WQG245DMCS</div></div>
+      </div>
+      <ul>
+        <li><strong>Výhody:</strong> stabilná veža, SelfCleaning, silný servis, 59,8 cm šírka, dobrý pomer cena/kvalita.</li>
+        <li><strong>Nevýhody:</strong> menej smart funkcií, treba vybrať aktuálne skladový kód sušičky.</li>
+        <li><strong>Rozhodnutie:</strong> prvá voľba, ak nechcete preplatiť Serie 8.</li>
+      </ul>
+    </div>
+    <div class="card product">
+      <h3>Bosch Serie 8: premium favorit</h3>
+      <div class="imgs">
+        <div class="figure"><img alt="Bosch WGB244A0CS práčka" src="https://media3.bsh-group.com/Product_Shots/21352729_WGB244A0CS_STP_def.webp"><div class="figcap">Práčka WGB244A0CS</div></div>
+        <div class="figure"><img alt="Bosch WQB245B0CS sušička" src="https://media3.bsh-group.com/Product_Shots/21357204_WQB245B0CS_STP_def.webp"><div class="figcap">Sušička WQB245B0CS</div></div>
+      </div>
+      <ul>
+        <li><strong>Výhody:</strong> tichšia sušička, i-DOS, prémiovejšia rada, najlepší dlhodobý komfort.</li>
+        <li><strong>Nevýhody:</strong> citeľne vyššia cena.</li>
+        <li><strong>Rozhodnutie:</strong> vyberte, ak je ticho pri obývačke dôležitejšie než úspora 400-500 €.</li>
+      </ul>
+    </div>
+    <div class="card product warn">
+      <h3>AEG 8 kg: menšia kapacita</h3>
+      <div class="imgs">
+        <div class="figure"><img alt="AEG LFR71844SBC práčka" src="https://www.aeg.sk/services/eml/asset/d268ca33-1ccb-46a3-b406-4cec946fdf42/E4RM3Q/PSAAWM220PA00044/WS_PN/PSAAWM220PA00044.png"><div class="figcap">Práčka LFR71844SBC</div></div>
+        <div class="figure"><img alt="AEG TR8182C sušička" src="https://www.aeg.sk/services/eml/asset/7868f892-d744-4038-8eed-0c1fb9f3504f/E4RM3Q/241002CX4C/WS_PN/241002CX4C.png"><div class="figcap">Sušička TR8182C</div></div>
+      </div>
+      <ul>
+        <li><strong>Výhody:</strong> 8 kg stačí, dobrá textilná starostlivosť, ProSteam/PreciseWash.</li>
+        <li><strong>Nevýhody:</strong> ručnejšia údržba kondenzátora, slabší 8 kg trh.</li>
+        <li><strong>Rozhodnutie:</strong> vhodné iba ak nechcete 9 kg a prijmete kompromis v údržbe.</li>
+      </ul>
+    </div>
+  </section>
 
-  <h2>Komentár k favoritovi LG: miešať 8 kg a 9 kg?</h2>
-  <p class="note">Toto dáva zmysel riešiť iba pri LG, lebo práve LG je favorit 8 kg výberu a má použiteľné 8 kg aj 9 kg modely s podobným dizajnom. Ceny sú orientačné z použitých porovnávaných modelov a rátajú s originálnym LG medzikusom približne 70-75 €.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Variant LG veže</th><th>Orientačná cena</th><th>Kedy dáva zmysel</th><th>Výhody</th><th>Nevýhody</th><th>Verdikt</th></tr></thead>
-      <tbody>
-        <tr class="best-row">
-          <td><strong>8 kg práčka + 8 kg sušička</strong><br><span class="small">F4X1008NWH + RC81V9AV4N + DSTWH</span></td>
-          <td><strong>1 022,55 €</strong></td>
-          <td>Ak vám dnešných 8 kg stačí a chcete najnižšiu rozumnú cenu.</td>
-          <td>Najlacnejšie, zladené, sušička má Auto Cleaning, ThinQ a 62 dB.</td>
-          <td>Menšia rezerva pri veľkých perinách a veľkých dávkach uterákov.</td>
-          <td><strong>Najlepší základ</strong></td>
-        </tr>
-        <tr class="ok-row">
-          <td><strong>9 kg práčka + 8 kg sušička</strong><br><span class="small">FA49V5VW1W + RC81V9AV4N + DSTWH</span></td>
-          <td><strong>cca 1 162,55 €</strong></td>
-          <td>Ak chcete väčšiu práčku na posteľnú bielizeň, ale nechcete platiť za 9 kg sušičku.</td>
-          <td>Viac miesta pri praní, stále lacnejšia než celý 9 kg set, sušička zostáva kvalitná.</td>
-          <td>Nie všetko, čo vyperieš naraz v 9 kg práčke, je ideálne sušiť naraz v 8 kg sušičke.</td>
-          <td>Dobré, ak často periete veľa, ale sušíte po častiach.</td>
-        </tr>
-        <tr class="ok-row">
-          <td><strong>8 kg práčka + 9 kg sušička</strong><br><span class="small">F4X1008NWH + RC91V9AV3N + DSTWH</span></td>
-          <td><strong>cca 1 118,39 €</strong></td>
-          <td>Ak dnešná 8 kg práčka stačí, ale chcete pohodlnejšie a voľnejšie sušenie.</td>
-          <td>Sušička má väčšiu rezervu, bielizeň má viac priestoru, menej krčenia a lepšie prúdenie vzduchu.</td>
-          <td>Drahšie než čistý 8 kg set; práčka stále zostáva limitom pri veľkých dávkach.</td>
-          <td><strong>Najlogickejší mix</strong>, ak miešať kapacity.</td>
-        </tr>
-        <tr>
-          <td><strong>9 kg práčka + 9 kg sušička</strong><br><span class="small">FA49V5VW1W + RC91V9AV3N + DSTWH</span></td>
-          <td><strong>1 258,39 €</strong></td>
-          <td>Ak chcete maximálnu rezervu a často periete/sušíte veľké dávky.</td>
-          <td>Najviac komfortu, najlepšia kapacitná zhoda, vhodné na posteľnú bielizeň a uteráky.</td>
-          <td>O cca 235,84 € drahšie než čistý 8 kg LG set.</td>
-          <td>Komfortná voľba, ak cena nevadí.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="card warn" style="margin-top:12px">
-    <h3>Praktické pravidlo</h3>
-    <p><strong>Ak miešať kapacity, bezpečnejšie je 8 kg práčka + 9 kg sušička než opačne.</strong> Sušička potrebuje priestor na pohyb vzduchu; väčšia sušička pri rovnakej dávke zvyčajne suší komfortnejšie a menej krčí. Opačný mix, teda 9 kg práčka + 8 kg sušička, dáva zmysel iba vtedy, keď chceš väčšiu práčku, ale si ochotný veľké pranie sušiť na dve dávky.</p>
-  </div>
+  <h2 id="prices">Ceny a SK odkazy</h2>
+  <p class="note">Ceny ber ako orientačný stav podľa aktuálnych SK výsledkov a workerov. Pred objednávkou treba kliknúť konkrétny e-shop, lebo pri bielej technike sa sklad a kódy menia rýchlo.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Verdikt</th><th>Zostava</th><th>Práčka</th><th>Sušička</th><th>Medzikus</th><th>Odhad spolu</th><th>Semafor</th></tr></thead>
+    <tbody>
+      <tr class="best-row"><td><strong>1.</strong></td><td><strong>Bosch Serie 6 9/9</strong></td><td><a href="https://www.bosch-home.com/sk/sk/mkt-product/pranie-a-susenie/pracky/pracky-plnene-spredu/WGG244Z2CS">WGG244Z2CS</a><br><a href="https://www.planeo.sk/bosch-wgg244z2cs">Planeo</a> · <a href="https://www.nay.sk/bosch-wgg244z2cs-pracka-plnena-spredu">NAY</a></td><td><a href="https://susicky.heureka.sk/bosch-wqg245d4by/">WQG245D4BY Heureka</a><br><a href="https://www.alza.sk/bosch-wqg245d4by-seria-6-d7997523.htm">Alza</a> · prípadne <a href="https://www.bosch-home.com/sk/sk/mkt-product/pranie-a-susenie/susicky/susicky-s-tepelnym-cerpadlom/WQG245DMCS">WQG245DMCS</a></td><td><a href="https://www.planeo.sk/bosch-wtz27410">WTZ27410</a></td><td><strong>cca 1 335-1 430 €</strong></td><td><span class="tag best">najlepší pomer riziko/cena</span></td></tr>
+      <tr class="ok-row"><td><strong>2.</strong></td><td><strong>Bosch Serie 8 9/9</strong></td><td><a href="https://www.nay.sk/bosch-wgb244a0cs-i-dos-pracka-plnena-spredu">WGB244A0CS</a></td><td><a href="https://www.nay.sk/set-vyrobkov-bosch-wgb244a0cs-wqb245b0cs">WQB245B0CS set</a></td><td>overiť v NAY pri sete</td><td><strong>cca 1 820 €+</strong></td><td><span class="tag ok">najlepší komfort, drahšie</span></td></tr>
+      <tr class="ok-row"><td><strong>3.</strong></td><td><strong>AEG 8/8</strong></td><td><a href="https://www.aeg.sk/laundry/laundry/washing-machines/front-loader-washing-machine/lfr71844sbc/">LFR71844SBC</a><br><a href="https://www.planeo.sk/aeg-lfr71844sbc">Planeo</a></td><td><a href="https://www.aeg.sk/laundry/laundry/dryers/heat-pump-dryer/tr8182c/">TR8182C</a><br><a href="https://susicky.heureka.sk/aeg-tr8182c/">Heureka</a></td><td><a href="https://www.aeg.sk/laundry/laundry/accessories/a1wyhsk2/">A1WYHSK2</a></td><td><strong>cca 1 050-1 150 €</strong></td><td><span class="tag ok">lacnejšie, ale údržbový kompromis</span></td></tr>
+      <tr class="risk-row"><td>Rezerva</td><td><strong>LG 8/8 alebo 9/9</strong></td><td><a href="https://www.lg.com/sk/pracky/lg-f4x1008nwh">F4X1008NWH</a> / <a href="https://www.lg.com/sk/pracky/lg-fa49v5vw1w">FA49V5VW1W</a></td><td><a href="https://www.lg.com/sk/susicky/lg-rc81v9av4n">RC81V9AV4N</a> / <a href="https://www.lg.com/sk/susicky/lg-rc91v9av3n">RC91V9AV3N</a></td><td><a href="https://www.planeo.sk/lg-dstwh">DSTWH</a></td><td><strong>dobrá cena, len ak skladom</strong></td><td><span class="tag badtag">nekupovať naslepo</span></td></tr>
+    </tbody>
+  </table></div>
 
-  <h2>Práčky vedľa seba</h2>
-  <p class="note">Pod progress barom sú mená workerov Sedmičky. Zelené plus znamená skóre 85+ pre danú vlastnosť, červené mínus znamená skóre pod 80. Neutrálne hodnotenie 80-84 sa nezobrazuje.</p>
-  <div class="table-wrap"><table id="washer"></table></div>
+  <h2 id="features">Funkcie a parametre vedľa seba</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Funkcia / vlastnosť</th><th>Bosch Serie 6 9/9</th><th>Bosch Serie 8 9/9</th><th>AEG 8/8</th><th>LG poznámka</th></tr></thead>
+    <tbody>
+      <tr><td>Kapacita</td><td>9 kg + 9 kg</td><td>9 kg + 9 kg</td><td>8 kg + 8 kg</td><td>8/8 aj 9/9 existuje, ale dostupnosť je riziko.</td></tr>
+      <tr><td>Otáčky práčky</td><td>1400 ot./min</td><td>1400 ot./min</td><td>1400 ot./min</td><td>1400 ot./min</td></tr>
+      <tr><td>Energetická trieda práčky</td><td>A</td><td>A</td><td>A</td><td>A</td></tr>
+      <tr><td>Šírka cez 60 cm zárubňu</td><td><span class="yes">áno</span>, 59,8 cm</td><td><span class="yes">áno</span>, overiť presný model</td><td><span class="yes">áno</span>, cca 59,7/59,6 cm</td><td><span class="maybe">tesne</span>, pri niektorých LG 60,0 cm</td></tr>
+      <tr><td>Automatické čistenie kondenzátora</td><td><span class="yes">áno</span>, SelfCleaning</td><td><span class="yes">áno</span>, silnejšia premium verzia</td><td><span class="no">nie</span> v rovnakej podobe</td><td><span class="yes">áno</span>, Auto Cleaning</td></tr>
+      <tr><td>Wi-Fi / appka</td><td><span class="no">nie</span> pri tomto value sete</td><td>podľa presného modelu</td><td>nie je hlavný dôvod kúpy</td><td><span class="yes">áno</span>, ThinQ</td></tr>
+      <tr><td>Automatické dávkovanie</td><td>nie pri WGG244Z2CS</td><td><span class="yes">áno</span>, i-DOS</td><td>nie, ale UniversalDose pri vyšších 9 kg AEG</td><td>nie je hlavný tromf</td></tr>
+      <tr><td>Para / osvieženie</td><td>podľa programu, skôr základ</td><td>lepšie komfortné funkcie</td><td><span class="yes">áno</span>, ProSteam</td><td><span class="yes">áno</span>, Steam</td></tr>
+      <tr><td>Rýchle pranie</td><td>SpeedPerfect</td><td>SpeedPerfect</td><td>MixLoad 69 min / 20 min 3 kg</td><td>TurboWash</td></tr>
+      <tr><td>Textilná starostlivosť sušičky</td><td>veľmi dobrá</td><td>veľmi dobrá až prémiová</td><td><span class="yes">najšetrnejšia</span> v tejto časti</td><td>veľmi dobrá</td></tr>
+      <tr><td>Dlhodobé riziko</td><td><span class="yes">nízke</span></td><td><span class="yes">nízke</span></td><td>stredné kvôli údržbe kondenzátora</td><td><span class="no">vyššie</span>, ak ide o výbehový / 0-stock kus</td></tr>
+    </tbody>
+  </table></div>
 
-  <h2>Sušičky vedľa seba</h2>
-  <p class="note">Aj tu sú mená odvodené iba z reálnych číselných skóre workerov. Započítané sú Gemini, Mistral a ChatGPT; Groq dodal kritické komentáre bez kompletnej bodovej tabuľky, Codex bol nepoužiteľný a Perplexity nedobehol.</p>
-  <div class="table-wrap"><table id="dryer"></table></div>
+  <h2 id="scores">Hodnotenie vlastností + workeri pri progress baroch</h2>
+  <p class="note">Nepripisujem workerom vymyslené detailné známky. Zelené mená sú tí, ktorí danú vlastnosť priamo podporili; červené mená sú tí, ktorí upozornili na riziko. Perplexity technicky nedodal použiteľný výstup, preto nie je v plus/mínus riadkoch.</p>
+  <div class="table-wrap"><table id="scoreTable"></table></div>
 
-  <h2>Technická matica práčok: tvrdé parametre a funkcie</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Parameter / funkcia</th><th>Bosch WAN28270CS</th><th>LG F4X1008NWH</th><th>AEG LFR71844SBC</th><th>Praktická poznámka</th></tr></thead>
-      <tbody>
-        <tr><td>Kapacita prania</td><td>8 kg</td><td>8 kg</td><td>8 kg</td><td>Všetky spĺňajú nové zadanie.</td></tr>
-        <tr><td>Max. otáčky odstreďovania</td><td><strong>1400 ot./min</strong></td><td><strong>1400 ot./min</strong></td><td><strong>1400 ot./min</strong></td><td>Všetky sú v tomto podstatnom parametri rovnocenné.</td></tr>
-        <tr><td>Trieda účinnosti odstreďovania</td><td>B</td><td>B</td><td>B</td><td>Pri reálnom sušení neočakávam veľký rozdiel.</td></tr>
-        <tr><td>Energetická trieda</td><td>A</td><td>A</td><td>A</td><td>Všetky sú dobré.</td></tr>
-        <tr><td>Spotreba energie / 100 cyklov</td><td>46 kWh</td><td>47 kWh</td><td>cca 42 kWh</td><td>AEG má papierovo najnižšiu spotrebu.</td></tr>
-        <tr><td>Spotreba vody / cyklus</td><td>47 l</td><td>48 l</td><td>42 l</td><td>AEG vyzerá najúspornejšie na vodu.</td></tr>
-        <tr><td>Hlučnosť odstreďovania</td><td>72 dB</td><td>75 dB</td><td>74 dB</td><td>Bosch je najtichší podľa dostupných údajov.</td></tr>
-        <tr><td>Šírka</td><td>59,8 cm</td><td>60,0 cm</td><td>59,6 cm</td><td>Pri 60 cm zárubni je LG najtesnejšie.</td></tr>
-        <tr><td>Hĺbka / max. hĺbka</td><td>59,0 / 63,2 cm s dvierkami</td><td>55,0 / 59,0 cm max.</td><td>57,2 / 60,2 cm max.</td><td>LG práčka je najplytšia.</td></tr>
-        <tr><td>Motor</td><td>EcoSilence Drive</td><td>Inverter Direct Drive</td><td>ÖKOInvertor</td><td>Všetko moderné invertorové riešenia.</td></tr>
-        <tr><td>Para / proti pokrčeniu</td><td>Iron Assist</td><td>Steam</td><td>ProSteam / SteamRefresh</td><td>AEG a LG sú silnejšie na paru; Bosch skôr proti pokrčeniu.</td></tr>
-        <tr><td>Rýchle programy</td><td>SpeedPerfect, Super 15'/30'</td><td>rýchly program, 10 programov</td><td>MixLoad 69 min, 20Min 3Kg</td><td>AEG má veľmi praktický každodenný mix.</td></tr>
-        <tr><td>Wi‑Fi / aplikácia</td><td>nie</td><td>LG ThinQ</td><td>nie pri tomto modeli</td><td>Smart výhoda LG, ale nie rozhodujúca.</td></tr>
-        <tr><td>Ochrana proti vytopeniu</td><td>AquaStop</td><td>nie podľa Planeo</td><td>Aqua Control senzor</td><td>Bosch je tu najistejší.</td></tr>
-        <tr><td>Pridanie prádla počas cyklu</td><td>Reload</td><td>overiť v návode</td><td>overiť v návode</td><td>Pri Boschi je výhoda jasnejšie uvedená.</td></tr>
-        <tr><td>Jazyk panelu</td><td>SK/CZ podľa predaja</td><td>SK/CZ podľa predaja</td><td>slovenčina</td><td>AEG má pri tomto variante výhodu slovenského panelu.</td></tr>
-        <tr><td>Záruka na motor</td><td>10 rokov na motor</td><td>10 rokov Direct Drive</td><td>doživotná po registrácii podľa AEG</td><td>Podmienky treba potvrdiť pri objednávke.</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Technická matica sušičiek: tvrdé parametre a funkcie</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Parameter / funkcia</th><th>Bosch WTH8520BBY</th><th>LG RC81V9AV4N</th><th>AEG TR818A2C</th><th>Praktická poznámka</th></tr></thead>
-      <tbody>
-        <tr><td>Kapacita sušenia</td><td>8 kg</td><td>8 kg</td><td>8 kg</td><td>Všetky sedia k 8 kg práčke.</td></tr>
-        <tr><td>Typ sušenia</td><td>tepelné čerpadlo</td><td>Dual Inverter tepelné čerpadlo</td><td>tepelné čerpadlo</td><td>Všetko správny moderný typ.</td></tr>
-        <tr><td>Energetická trieda</td><td>D podľa nového štítku / A++ starý kontext</td><td>C podľa nového štítku / A+++ starý kontext</td><td>C podľa nového štítku / A+++ starý kontext</td><td>Nové štítky pôsobia prísnejšie; porovnávaj aj kWh/100 cyklov.</td></tr>
-        <tr><td>Spotreba energie / 100 cyklov</td><td>cca 119 kWh</td><td>96 kWh</td><td>cca 99 kWh</td><td>LG je papierovo najúspornejšia z týchto troch.</td></tr>
-        <tr><td>Hlučnosť</td><td>63 dB</td><td>62 dB</td><td>67 dB</td><td>LG najtichšia, AEG citeľne hlučnejšia.</td></tr>
-        <tr><td>Šírka</td><td>cca 59,8 cm</td><td>60,0 cm</td><td>59,6 cm</td><td>Všetky tesné, AEG/Bosch majú malú rezervu.</td></tr>
-        <tr><td>Hĺbka</td><td>cca 61-65 cm podľa merania</td><td>66,0 cm</td><td>63,8 cm</td><td>LG je najhlbšia, treba miesto za vežou.</td></tr>
-        <tr><td>Samočistenie kondenzátora</td><td>nie, EasyClean filter</td><td><strong>áno, Auto Cleaning až 3× za cyklus</strong></td><td>nie, manuálna údržba filtrov/kondenzátora</td><td>Najväčšia praktická výhoda LG.</td></tr>
-        <tr><td>Senzorové sušenie</td><td>AutoDry</td><td>inteligentné senzory</td><td>PreciseDry / SensiDry</td><td>Všetky majú senzoriku, AEG je šetrnejšie k textilu.</td></tr>
-        <tr><td>Šetrné programy na textil</td><td>SensitiveDrying</td><td>Vlna, Jemná bielizeň, Alergici</td><td>AbsoluteCare, MixDry, vlna/hodváb/outdoor</td><td>AEG je najlepší kandidát na jemné oblečenie.</td></tr>
-        <tr><td>Wi‑Fi / aplikácia</td><td>nie pri tomto modeli</td><td>LG ThinQ, diaľkový štart, Smart Diagnosis</td><td>nie pri tomto modeli</td><td>Smart výhoda LG.</td></tr>
-        <tr><td>Eco / rýchlosť režim</td><td>základné programy</td><td>EcoHybrid: energia / čas</td><td>PreciseDry podľa náplne</td><td>LG dáva používateľovi najviac voľby.</td></tr>
-        <tr><td>Možnosť napojenia na odpad</td><td>overiť podľa balenia</td><td>áno</td><td>áno</td><td>Pri veži veľmi praktické, nech netreba vylievať nádobu.</td></tr>
-        <tr><td>Otočenie dvierok</td><td>overiť</td><td>áno</td><td>overiť</td><td>Pri kúpeľni dôležité pre ergonómiu.</td></tr>
-        <tr><td>Osvetlenie bubna</td><td>nie / overiť</td><td>áno podľa Planeo</td><td>overiť</td><td>Komfort, nie rozhodovací parameter.</td></tr>
-        <tr><td>Počet programov</td><td>základná sada + rýchle 40</td><td>14 + stiahnuteľné cez Wi‑Fi</td><td>9 hlavných, silné textilné programy</td><td>LG najviac funkcií, AEG najviac textilná logika.</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Funkcie, ktoré rozhodujú</h2>
-  <div class="split-note">
-    <div class="card"><h3>LG reálne navyše</h3><ul class="model-list"><li>automatické čistenie kondenzátora sušičky,</li><li>Wi‑Fi / ThinQ pri práčke aj sušičke,</li><li>EcoHybrid: voľba čas vs energia,</li><li>najnižšia cena celej veže.</li></ul></div>
-    <div class="card"><h3>Bosch reálne navyše</h3><ul class="model-list"><li>najjednoduchšia a servisne konzervatívna zostava,</li><li>AquaStop pri práčke,</li><li>nižšia hlučnosť práčky než LG,</li><li>veľmi dobrý slovenský/cz servisný pocit.</li></ul></div>
-    <div class="card"><h3>AEG reálne navyše</h3><ul class="model-list"><li>najlepší argument pri šetrnosti k textilu,</li><li>ProSteam / SteamRefresh a MixLoad 69 min,</li><li>AbsoluteCare / SensiDry / PreciseDry,</li><li>originálny medzikus s výsuvom a dobrá ergonómia.</li></ul></div>
-  </div>
-
-  <h2>Odporúčanie podľa toho, čo preferujete</h2>
-  <div class="split-note">
+  <h2 id="mix">Verdikt pre mix kapacít</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>8 kg práčka + 9 kg sušička</h3>
+      <p class="price">Dáva zmysel niekedy</p>
+      <ul>
+        <li><strong>Výhody:</strong> sušička má viac priestoru, bielizeň sa lepšie presuší a menej krčí.</li>
+        <li><strong>Nevýhody:</strong> musí byť jedna značka a kompatibilný medzikus; dizajn a výška nemusia sedieť.</li>
+        <li><strong>Kedy áno:</strong> ak periete bežne 8 kg, ale chcete väčšiu rezervu v sušičke.</li>
+      </ul>
+    </div>
+    <div class="card risk">
+      <h3>9 kg práčka + 8 kg sušička</h3>
+      <p class="price">Skôr nie</p>
+      <ul>
+        <li><strong>Problém:</strong> plnú 9 kg dávku musíte deliť alebo sušičku preťažiť.</li>
+        <li><strong>Kedy by to šlo:</strong> iba ak 9 kg práčku reálne nikdy nenaplníte a kupujete ju kvôli väčšiemu bubnu.</li>
+        <li><strong>Odporúčanie:</strong> nebrať ako plánovanú vežu.</li>
+      </ul>
+    </div>
     <div class="card winner">
-      <h3>Vyber LG, ak...</h3>
-      <ul class="model-list">
-        <li>preferujete <strong>automatické čistenie kondenzátora</strong> viac než servisnú konzervatívnosť Boschu,</li>
-        <li>chcete najnižšiu cenu celej veže a stále dobrú výbavu,</li>
-        <li>neprekáža vám Wi‑Fi/smart ekosystém a viac elektroniky,</li>
-        <li>viete akceptovať, že šírka 60 cm je pri zárubni tesná.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Vyber Bosch, ak...</h3>
-      <ul class="model-list">
-        <li>preferujete <strong>jednoduchosť a servisnú istotu</strong> viac než smart funkcie,</li>
-        <li>nevadí vám ručnejšia údržba sušičky bez SelfCleaning Condenser,</li>
-        <li>chcete konzervatívnejší set s AquaStop práčkou,</li>
-        <li>radšej obetujete výbavu za pocit „menej vecí sa pokazí“.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Vyber AEG, ak...</h3>
-      <ul class="model-list">
-        <li>preferujete <strong>šetrnosť k oblečeniu</strong> viac než najnižšiu cenu,</li>
-        <li>periete a sušíte veľa jemných vecí, vlnu, outdoor alebo kvalitné textílie,</li>
-        <li>chcete ProSteam, AbsoluteCare a textilné programy,</li>
-        <li>nevadí vám vyššia cena a hlučnejšia sušička.</li>
+      <h3>Pri favoritovi</h3>
+      <p class="price">Bosch 9/9</p>
+      <ul>
+        <li><strong>Najčistejšie riešenie:</strong> 9 kg práčka + 9 kg sušička.</li>
+        <li><strong>Cenovo:</strong> oproti 8 kg AEG môže byť drahší, ale získate SelfCleaning a lepší dlhodobý komfort.</li>
+        <li><strong>Verdikt:</strong> mix nerobiť, pokiaľ nie je výrazný cenový dôvod.</li>
       </ul>
     </div>
   </div>
 
-  <h2>Čo stráca 8 kg verzia oproti 9 kg výberu</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Značka</th><th>Čo je horšie alebo chýba pri 8 kg variante</th><th>Je to zásadné?</th><th>Praktický dopad</th></tr></thead>
-      <tbody>
-        <tr class="risk-row">
-          <td><strong>Bosch</strong></td>
-          <td>8 kg sušička WTH8520BBY nemá SelfCleaning Condenser, iba EasyClean filter. Oproti 9 kg Bosch sušičke so SelfCleaning Condenser je to najväčší krok dole.</td>
-          <td><strong>Áno</strong></td>
-          <td>Treba pravidelnejšia ručná údržba. Ak sa zanedbá, sušenie môže trvať dlhšie a spotreba stúpne.</td>
-        </tr>
-        <tr class="ok-row">
-          <td><strong>Bosch</strong></td>
-          <td>Práčka je Serie 4, nie pôvodne zvažovaná Serie 6. Stále má 8 kg, 1400 ot., triedu A, Iron Assist, SpeedPerfect a AquaStop.</td>
-          <td>Skôr nie</td>
-          <td>Na bežné pranie je stále dobrá. Nižšia rada je cítiť skôr vo výbave a prémiovom pocite než v základnej funkcii.</td>
-        </tr>
-        <tr class="ok-row">
-          <td><strong>LG</strong></td>
-          <td>8 kg práčka F4X1008NWH má Steam, ThinQ a Direct Drive, ale oproti niektorým 9 kg LG kandidátom nemusí mať plný TurboWash / AI DD balík v rovnakej podobe.</td>
-          <td>Stredne</td>
-          <td>Stratí sa časť smart/prémiovej práčkovacej výbavy, ale základ 8 kg, 1400 ot., A trieda a para zostávajú.</td>
-        </tr>
-        <tr class="best-row">
-          <td><strong>LG</strong></td>
-          <td>8 kg sušička RC81V9AV4N si necháva kľúčové výhody: automatické čistenie kondenzátora, ThinQ, EcoHybrid, 62 dB a tepelné čerpadlo.</td>
-          <td><strong>Nie</strong></td>
-          <td>Pri LG je 8 kg prechod najčistejší. Prichádzaš hlavne o 1 kg kapacity, nie o najdôležitejšie funkcie.</td>
-        </tr>
-        <tr class="ok-row">
-          <td><strong>AEG</strong></td>
-          <td>AEG 8 kg si drží ProSteam/PreciseWash pri práčke a AbsoluteCare/SensiDry pri sušičke, ale nemá automatické čistenie kondenzátora.</td>
-          <td>Stredne</td>
-          <td>Výborné na textil, slabšie na pohodlie údržby. Navyše je drahšie a sušička hlučnejšia.</td>
-        </tr>
-        <tr>
-          <td><strong>Všetky 8 kg</strong></td>
-          <td>Menšia kapacita oproti 9 kg.</td>
-          <td>Podľa prania</td>
-          <td>Ak vám dnešných 8 kg stačí, nie je to problém. Pri veľkých perinách a veľkých dávkach uterákov bude 9 kg pohodlnejšie.</td>
-        </tr>
-      </tbody>
-    </table>
+  <h2 id="workers">Sedmička: kto za čo hlasoval</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Worker</th><th>Hlas / postoj</th><th>Praktický dopad do reportu</th></tr></thead>
+    <tbody>
+      <tr><td><strong>ChatGPT</strong></td><td>Bosch WGG244Z2CS + WQG245DMCS ako 9 kg víťaz; AEG TR8182C ako najlepší 8 kg kompromis.</td><td>Potvrdil Bosch 9 kg a vyradenie starých modelov.</td></tr>
+      <tr><td><strong>Claude Code</strong></td><td>Najlepšia hodnota Bosch WGG244Z2CS + WQG245D4BY; premium Bosch Serie 8, ak budget dovolí.</td><td>Preto report odporúča D4BY ako overiteľnejší value kód a DMCS ako dobrý setový variant.</td></tr>
+      <tr><td><strong>Gemini</strong></td><td>Podporil Bosch 9/9 a odmietol 9/8 mix; upozornil na dostupnosť LG a starých Bosch modelov.</td><td>Upevnil finálny verdikt Bosch 9/9.</td></tr>
+      <tr><td><strong>Groq</strong></td><td>Kritický hlas: overiť dostupnosť, nedôverovať výbehovým kódom a slepo nebrať LG.</td><td>V reporte sú rizikové modely označené červeným semaforom.</td></tr>
+      <tr><td><strong>Mistral</strong></td><td>Legislatívny/servisný pohľad: odporúča aktuálne modely, diely, originálny medzikus a údržbu kondenzátora.</td><td>Pridaný dôraz na nákup na 5-10 rokov a originálne spojovacie sady.</td></tr>
+      <tr><td><strong>Codex</strong></td><td>Našiel chyby v starom reporte: nedostupné Bosch modely, LG bez dostupnostnej penalizácie, zlé cenové tabuľky.</td><td>Všetky tieto chyby sú opravené v hornej časti reportu.</td></tr>
+      <tr><td><strong>Perplexity</strong></td><td>Technicky nedodal použiteľný webový výstup: API vrátilo prázdnu odpoveď.</td><td>Nepripisujem mu hlas. Webové tvrdenia sú opreté o ostatných workerov a ručné odkazy na SK zdroje.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Finálny krátky verdikt pre manželku</h2>
+  <div class="card winner">
+    <p><strong>Kúpili by sme Bosch 9 kg vežu.</strong> Najrozumnejšie je Bosch Serie 6 <strong>WGG244Z2CS + WQG245D4BY</strong> alebo rovnaký skladový set s <strong>WQG245DMCS</strong>, ak vyjde cenovo dobre a má originálny medzikus. Ak chceme tichšie a prémiovejšie riešenie bez väčšieho riešenia ceny, zoberieme Bosch Serie 8 <strong>WGB244A0CS + WQB245B0CS</strong>.</p>
+    <p>8 kg zostava dáva zmysel len vtedy, ak vyslovene nechceme väčšiu kapacitu. Vtedy je najčistejší kandidát AEG, ale s vedomím, že údržba kondenzátora je horšia než pri Bosch. LG je technicky zaujímavé, no nekupoval by som ho ako hlavné odporúčanie, pokiaľ konkrétny set nie je normálne skladom u dobrého predajcu.</p>
   </div>
-
-  <h2>Sedmička</h2>
-  <p>V použiteľných odpovediach hlasovali <strong>Gemini a ChatGPT za LG</strong>, <strong>Mistral za AEG</strong>. Groq dodal kritické protiargumenty, hlavne proti Bosch sušičke bez samočistenia kondenzátora a proti marketingu smart funkcií. Codex nedodal použiteľné hodnotenie, Perplexity ostal vo fronte a Claude ešte v čase reportu dobiehal.</p>
-
-  <h2>Verdikt</h2>
-  <p><strong>Pre vaše nové 8 kg zadanie by som vybral LG F4X1008NWH + LG RC81V9AV4N + LG DSTWH.</strong> Je najlacnejšie z porovnávaných veží, má automatické čistenie kondenzátora a sušička je tichšia než AEG. Bosch by som bral, ak chcete čo najjednoduchšiu konzervatívnu zostavu a nevadí vám ručnejšia údržba sušičky. AEG by som bral iba vtedy, ak je najväčšia priorita jemné oblečenie a nie cena.</p>
 </main>
 <script>
-const washerRows=[
-["Cena",[82.7,78.7,75.3],["dobrá cena","najlacnejšia práčka","drahšia než LG"]],
-["Rozmery / 60 cm",[94.3,92.3,95.7],["59,8 cm","60,0 cm tesne","59,6 cm najistejšie"]],
-["Hlučnosť / stabilita",[85.3,89.0,90.3],["72 dB","Direct Drive","ÖKOInvertor"]],
-["Žmýkanie",[86.7,91.0,91.7],["1400 ot.","1400 ot.","1400 ot."]],
-["Energetika",[90.3,90.7,92.0],["trieda A","trieda A","trieda A, 42 l"]],
-["Programy / funkcie",[82.0,92.7,88.3],["Iron Assist","Steam, ThinQ","ProSteam"]],
-["Jednoduchosť",[89.0,82.3,83.7],["najjednoduchšia","viac smart","viac funkcií"]],
-["Servis / spoľahlivosť",[91.0,88.7,89.0],["silný servis","viac elektroniky","dobrá značka"]]
-];
-const washerRaw={
-Gemini:[[80,65,70],[100,100,100],[80,95,90],[90,95,90],[90,90,90],[75,95,85],[85,80,80],[90,95,85]],
-Mistral:[[80,75,70],[95,95,95],[85,90,95],[80,90,95],[90,90,95],[85,95,90],[90,85,85],[90,85,95]],
-ChatGPT:[[88,96,86],[88,82,92],[91,82,86],[90,88,90],[91,92,91],[86,88,90],[92,82,86],[93,86,87]]
-};
-const dryerRaw={
-Gemini:[[80,65,70],[100,100,100],[80,90,85],[90,95,90],[80,85,95],[40,100,70],[70,90,85],[90,90,85]],
-Mistral:[[80,75,70],[95,95,95],[85,90,95],[90,90,95],[85,90,95],[70,95,90],[80,95,90],[90,85,95]],
-ChatGPT:[[94,86,76],[90,78,86],[91,91,74],[78,90,89],[84,91,92],[72,95,74],[80,91,89],[90,88,86]]
-};
-const dryerRows=[
-["Cena",[84.7,75.3,72.0],["najlacnejšia","drahšia výbava","najdrahšia"]],
-["Rozmery / 60 cm",[95.0,91.0,93.7],["štandard","hĺbka 66 cm","59,6 cm"]],
-["Hlučnosť",[85.3,90.3,84.7],["63 dB","62 dB","67 dB"]],
-["Energetika",[83.0,88.7,94.0],["slabší nový štítok","úsporná","najlepšia"]],
-["Kvalita sušenia",[86.0,91.7,91.3],["AutoDry","Dual Inverter","AbsoluteCare"]],
-["Údržba kondenzátora",[60.7,96.7,78.0],["EasyClean ručne","Auto Cleaning","ručnejšia údržba"]],
-["Programy / funkcie",[76.7,92.0,88.0],["základ","ThinQ, EcoHybrid","MixDry, SensiDry"]],
-["Servis / spoľahlivosť",[90.0,87.7,88.7],["silný servis","dobrá záruka","dobrá značka"]]
+const rows=[
+  {p:"Cena / hodnota",scores:[91,76,82,72],plus:["Claude","ChatGPT"],minus:["Groq"],notes:["Serie 6 má najlepší balans","Serie 8 je lepší, ale drahý","8 kg lacnejšie, ale kompromis","LG lacné len ak je reálne skladom"]},
+  {p:"Dostupnosť a aktuálnosť",scores:[88,84,78,45],plus:["Claude","ChatGPT","Gemini"],minus:["Codex","Groq","Mistral"],notes:["D4BY overiteľnejší, DMCS overiť pri sete","NAY bundle je silný signál","AEG 8 kg ok, TR8182C lepší než TR818A2C","oficiálne 0/obmedzené signály"]},
+  {p:"Stabilita veže",scores:[93,94,84,82],plus:["ChatGPT","Gemini","Mistral"],minus:[],notes:["originálny Bosch kit","prémiová Bosch veža","ok, ale menej silný argument","ok pri originálnom DSTWH"]},
+  {p:"Tichosť pri obývačke",scores:[88,96,76,86],plus:["Claude","ChatGPT"],minus:[],notes:["cca 61-64 dB podľa sušičky","najlepšie v reporte","TR8182C ok, TR818A2C horšia","technicky dobré"]},
+  {p:"Údržba kondenzátora",scores:[95,98,62,90],plus:["ChatGPT","Claude","Gemini","Mistral"],minus:["Groq"],notes:["SelfCleaning","najlepší komfort","ručnejšia údržba","Auto Cleaning, ak dostupné"]},
+  {p:"Funkcie navyše",scores:[78,90,86,94],plus:["Claude"],minus:[],notes:["menej smart","i-DOS a premium režimy","ProSteam/PreciseWash","ThinQ, Steam, TurboWash"]},
+  {p:"Kapacitná rezerva",scores:[95,95,74,86],plus:["ChatGPT","Gemini"],minus:[],notes:["9/9 ideálne","9/9 ideálne","8/8 stačí, menšia rezerva","podľa konkrétnej 8/9 verzie"]},
+  {p:"Nákup na 5-10 rokov",scores:[92,96,80,62],plus:["Claude","Mistral","Gemini"],minus:["Codex","Groq"],notes:["najistejší value nákup","najistejší premium nákup","dobré, ale údržba","riziko výbehovosti/dostupnosti"]}
 ];
 function cls(n){return n>=85?"good":n>=70?"mid":"bad"}
 function bar(n){return `<div class="bar"><strong>${n}</strong><div class="track"><div class="fill ${cls(n)}" style="width:${n}%"></div></div></div>`}
-function names(raw,row,brand,mode){
-  return Object.entries(raw).filter(([,vals])=>mode==="positive"?vals[row][brand]>=85:vals[row][brand]<80).map(([n])=>n);
-}
-function score(raw,row,brand,value,note){
-  const pos=names(raw,row,brand,"positive"), crit=names(raw,row,brand,"critical");
-  return `<div class="score-cell">${bar(value)}<div class="small">${note}</div><div class="worker-votes">
-    <div class="${pos.length?'positive':'none'}">+ ${pos.length?pos.join(', '):'nikto výrazne pozitívny'}</div>
-    <div class="${crit.length?'critical':'none'}">- ${crit.length?crit.join(', '):'nikto výrazne kritický'}</div>
-  </div></div>`;
-}
-function table(id,rows,raw){
-  document.getElementById(id).innerHTML='<thead><tr><th>Vlastnosť</th><th>Bosch</th><th>LG</th><th>AEG</th><th>Víťaz</th></tr></thead><tbody>'+
-  rows.map((r,rowIdx)=>{
-    const max=Math.max(...r[1]); const names=["Bosch","LG","AEG"]; const win=names[r[1].indexOf(max)];
-    return `<tr><td><strong>${r[0]}</strong></td>${r[1].map((v,i)=>`<td>${score(raw,rowIdx,i,v,r[2][i])}</td>`).join('')}<td><strong>${win}</strong></td></tr>`;
-  }).join('')+'</tbody>';
-}
-table('washer',washerRows,washerRaw); table('dryer',dryerRows,dryerRaw);
+function cell(n,note,plus,minus){return `<div class="score-cell">${bar(n)}<div class="small">${note}</div><div class="worker-votes"><div class="${plus.length?'positive':'none'}">+ ${plus.length?plus.join(', '):'bez výslovného plusu'}</div><div class="${minus.length?'critical':'none'}">- ${minus.length?minus.join(', '):'bez výslovnej kritiky'}</div></div></div>`}
+document.getElementById("scoreTable").innerHTML='<thead><tr><th>Vlastnosť</th><th>Bosch Serie 6 9/9</th><th>Bosch Serie 8 9/9</th><th>AEG 8/8</th><th>LG, ak skladom</th></tr></thead><tbody>'+rows.map(r=>`<tr><td><strong>${r.p}</strong></td>${r.scores.map((s,i)=>`<td>${cell(s,r.notes[i],r.plus,r.minus)}</td>`).join("")}</tr>`).join("")+'</tbody>';
 </script>
 </body>
 </html>
